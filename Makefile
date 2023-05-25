@@ -10,9 +10,6 @@ bonus: server_bonus client_bonus
 $(LIBPRINTF):
 	make -C ft_printf
 
-# %.o: %.c
-# 	$(CC) $(CFLAGS) -c $< -o $@
-
 server: $(LIBPRINTF) server.c
 	$(CC) server.c ft_printf/libftprintf.a -o server $(CFLAGS)
 
@@ -35,5 +32,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:all bonus clean fclean re
 
+.PHONY:all bonus clean fclean re

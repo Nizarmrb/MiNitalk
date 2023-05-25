@@ -6,13 +6,13 @@
 /*   By: nelmrabe <nelmrabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 18:52:01 by nelmrabe          #+#    #+#             */
-/*   Updated: 2023/05/20 16:12:35 by nelmrabe         ###   ########.fr       */
+/*   Updated: 2023/05/21 18:11:49 by nelmrabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	g_count = 7;
+int		g_count = 7;
 
 void	signal_hundler(int sig, siginfo_t *info, void *context)
 {
@@ -52,5 +52,6 @@ int	main(void)
 	info.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &info, NULL);
 	sigaction(SIGUSR2, &info, NULL);
-	while (1) ;
+	while (1)
+		;
 }
